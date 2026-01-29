@@ -1,0 +1,31 @@
+name: hprobes
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  # Core scientific stack
+  - numpy
+  - pyyaml
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - networkx
+  # Notebook tooling
+  - pandas
+  - jupyter
+  - ipykernel
+  - nbconvert
+  - nbclient
+  # PyTorch (CPU by default). For GPU, also add pytorch-cuda below.
+  - pytorch
+  # Optional for NVIDIA GPU (uncomment the next line if you have CUDA 12.1)
+  # - pytorch-cuda=12.1
+  - pip:
+      - transformers>=4.44
+      - accelerate>=0.33
+      - huggingface_hub>=0.24
+      - hf_transfer
